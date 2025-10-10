@@ -49,17 +49,53 @@ cuarto: codigo fragil que requiere mantener un contador manual llamado cantidad.
 
 quinto: tienes que saber el tamano maximo antes de compilar el programa.
 
+### clase de prueba para ver el problema
+
+```java
+public class TestCarritoProblema {
+
+    public static void main(String[] args) {
+
+        CarritoCompras miCarrito = new CarritoCompras();
+
+        miCarrito.agregarProducto("laptop lenovo");
+        miCarrito.agregarProducto("mouse logitech");
+        miCarrito.agregarProducto("teclado mecanico");
+        miCarrito.agregarProducto("monitor samsung");
+        miCarrito.agregarProducto("webcam");
+        miCarrito.agregarProducto("audifonos");
+
+        System.out.println("productos en el carrito:");
+        miCarrito.mostrarCarrito();
+    }
+}
+```
+
+salida en consola:
+
+```
+carrito lleno, no puedes agregar mas
+productos en el carrito:
+laptop lenovo
+mouse logitech
+teclado mecanico
+monitor samsung
+webcam
+```
+
 ### validacion del problema
 
-paso 1: copia el codigo anterior en netbeans
+paso 1: crea un nuevo proyecto en netbeans llamado problemaarreglo
 
-paso 2: crea una clase testcarrito con el metodo main
+paso 2: copia la clase carritocompras con arreglo fijo
 
-paso 3: intenta agregar 6 productos diferentes
+paso 3: copia la clase testcarritoproblema con el metodo main
 
-paso 4: ejecuta con f6 y observa en la consola como el sexto producto se rechaza
+paso 4: ejecuta testcarritoproblema con f6 como clase principal
 
-paso 5: observa el mensaje carrito lleno no puedes agregar mas
+paso 5: observa en la consola como el sexto producto audifonos se rechaza
+
+paso 6: observa el mensaje carrito lleno no puedes agregar mas
 
 ## la solucion: arraylist
 
