@@ -144,72 +144,6 @@ public class PruebaConexion {
 2. Run File
 3. Si muestra "Conexion exitosa!" todo esta correcto
 
-## Parte 5: Conectar la vista con el controlador
-
-Una vez que todo funciona, hay que conectar los botones de la vista con los metodos del controlador.
-
-### En VentanaPrincipal.java
-
-Agregar el controlador como atributo:
-
-```java
-private PizzaController controller = new PizzaController();
-```
-
-### Evento del boton Insertar
-
-```java
-private void btnInsertarActionPerformed(java.awt.event.ActionEvent evt) {
-    String nombre = txtNombre.getText();
-    double precio = Double.parseDouble(txtPrecio.getText());
-    String tamanio = txtTamanio.getText();
-
-    Pizza pizza = new Pizza(nombre, precio, tamanio);
-
-    if (controller.insertar(pizza)) {
-        JOptionPane.showMessageDialog(this, "Pizza insertada correctamente");
-        limpiarCampos();
-        cargarTabla();
-    } else {
-        JOptionPane.showMessageDialog(this, "Error al insertar");
-    }
-}
-```
-
-### Evento del boton Listar todo
-
-```java
-private void btnListarTodoActionPerformed(java.awt.event.ActionEvent evt) {
-    cargarTabla();
-}
-```
-
-### Metodo para cargar la tabla
-
-```java
-private void cargarTabla() {
-    DefaultTableModel modelo = (DefaultTableModel) tablaPizzas.getModel();
-    modelo.setRowCount(0); // Limpiar tabla
-
-    ArrayList<Pizza> pizzas = controller.listarTodos();
-
-    for (Pizza p : pizzas) {
-        Object[] fila = {p.getId(), p.getNombre(), p.getPrecio(), p.getTamanio()};
-        modelo.addRow(fila);
-    }
-}
-```
-
-### Metodo para limpiar campos
-
-```java
-private void limpiarCampos() {
-    txtNombre.setText("");
-    txtPrecio.setText("");
-    txtTamanio.setText("");
-}
-```
-
 ## Resumen de archivos
 
 Al finalizar deberias tener:
@@ -229,6 +163,8 @@ PizzeriaSistema/
             └── Conexion.java
 ```
 
-## Listo!
+---
 
-Con esto tienes el sistema completo funcionando. Puedes probarlo ejecutando VentanaPrincipal.java.
+## Siguiente: 05-guia-eventos.md
+
+En la siguiente guia conectaremos los botones de la vista con los metodos del controlador.

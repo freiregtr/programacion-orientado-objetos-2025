@@ -81,3 +81,4 @@ La interfaz debe contemplar:
 2. [02-guia-modelos.md](02-guia-modelos.md) - Creacion de la clase Pizza
 3. [03-guia-controladores.md](03-guia-controladores.md) - Logica del controlador y CRUD
 4. [04-guia-bbdd.md](04-guia-bbdd.md) - Configuracion de MySQL y conexion
+5. [05-guia-eventos.md](05-guia-eventos.md) - Conectar eventos con el controlador

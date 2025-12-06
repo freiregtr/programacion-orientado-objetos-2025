@@ -27,11 +27,16 @@ public class Pizza {
 
 ## Paso 3: Crear los constructores
 
-Necesitamos dos constructores:
+Necesitamos tres constructores:
+- Uno vacio (para crear objetos y usar setters)
 - Uno sin ID (para insertar, porque el ID es autoincremental)
 - Uno con ID (para cuando traemos datos de la BD)
 
 ```java
+// Constructor vacio
+public Pizza() {
+}
+
 // Constructor sin ID (para insertar)
 public Pizza(String nombre, double precio, String tamanio) {
     this.nombre = nombre;
@@ -89,17 +94,6 @@ public void setTamanio(String tamanio) {
 }
 ```
 
-## Paso 5: Crear metodo toString (opcional)
-
-Util para debuggear:
-
-```java
-@Override
-public String toString() {
-    return "Pizza{" + "id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", tamanio=" + tamanio + '}';
-}
-```
-
 ## Codigo completo
 
 ```java
@@ -111,6 +105,10 @@ public class Pizza {
     private String nombre;
     private double precio;
     private String tamanio;
+
+    // Constructor vacio
+    public Pizza() {
+    }
 
     // Constructor sin ID (para insertar)
     public Pizza(String nombre, double precio, String tamanio) {
@@ -158,11 +156,6 @@ public class Pizza {
 
     public void setTamanio(String tamanio) {
         this.tamanio = tamanio;
-    }
-
-    @Override
-    public String toString() {
-        return "Pizza{" + "id=" + id + ", nombre=" + nombre + ", precio=" + precio + ", tamanio=" + tamanio + '}';
     }
 }
 ```

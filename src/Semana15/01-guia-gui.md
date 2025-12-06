@@ -108,6 +108,7 @@ las islas son los paneles principales que dividen nuestra interfaz en secciones,
 1. En la Palette (derecha), buscar JPanel en Swing Containers
 2. Arrastrar un JPanel al lado izquierdo del JFrame
 3. Ajustar el tamano para que ocupe aproximadamente 1/3 del ancho
+4. Cambiar nombre de variable a: `pnlIzquierdo`
 
 este panel va a contener los 3 formularios
 
@@ -115,6 +116,7 @@ este panel va a contener los 3 formularios
 
 1. Arrastrar otro JPanel al lado derecho
 2. Ajustar para que ocupe los 2/3 restantes
+3. Cambiar nombre de variable a: `pnlDerecho`
 
 este panel va a contener la tabla de registros
 
@@ -136,6 +138,7 @@ dentro del panel izquierdo, vamos a crear 3 paneles mas pequenos, uno para cada 
 6. Seleccionar TitledBorder
 7. En Title escribir: `Insertar nuevo (ID autoincremental)`
 8. Click en OK
+9. Cambiar nombre de variable a: `pnlInsertar`
 
 ahora el panel tiene un titulo que indica su funcion
 
@@ -143,11 +146,13 @@ ahora el panel tiene un titulo que indica su funcion
 
 1. Arrastrar otro JPanel debajo del anterior
 2. Agregar TitledBorder con titulo: `Actualizar`
+3. Cambiar nombre de variable a: `pnlActualizar`
 
 ### 5.3 Panel Eliminar
 
 1. Arrastrar otro JPanel debajo del anterior
 2. Agregar TitledBorder con titulo: `Eliminar`
+3. Cambiar nombre de variable a: `pnlEliminar`
 
 ahora tenemos los 3 sub-paneles organizados verticalmente en el lado izquierdo
 
@@ -159,6 +164,7 @@ ahora tenemos los 3 sub-paneles organizados verticalmente en el lado izquierdo
 
 1. Seleccionar el panel derecho
 2. Agregar TitledBorder con titulo: `Registros`
+3. Cambiar nombre de variable a: `pnlRegistros`
 
 ### 6.2 Vista previa de la estructura
 
@@ -196,13 +202,13 @@ ahora vamos a agregar los campos y botones dentro del panel Insertar
 
 dentro del panel "Insertar nuevo", agregar:
 
-1. **JLabel** con texto: `Nombre:`
+1. **JLabel** con texto: `Nombre:` - cambiar nombre de variable a `lblNombre`
 2. **JTextField** al lado - cambiar nombre de variable a `txtNombre`
 
-3. **JLabel** con texto: `Precio:`
+3. **JLabel** con texto: `Precio:` - cambiar nombre de variable a `lblPrecio`
 4. **JTextField** al lado - cambiar nombre de variable a `txtPrecio`
 
-5. **JLabel** con texto: `Tamanio:`
+5. **JLabel** con texto: `Tamanio:` - cambiar nombre de variable a `lblTamanio`
 6. **JTextField** al lado - cambiar nombre de variable a `txtTamanio`
 
 para cambiar el nombre de la variable:
@@ -236,7 +242,7 @@ para cambiar el nombre de la variable:
 
 dentro del panel "Actualizar", agregar:
 
-1. **JLabel** con texto: `ID a actualizar:`
+1. **JLabel** con texto: `ID a actualizar:` - variable: `lblIdActualizar`
 2. **JTextField** al lado - variable: `txtIdActualizar`
 
 ### 8.2 Agregar botones
@@ -264,7 +270,7 @@ el boton "Cargar datos" sirve para traer los datos de una pizza por su ID y most
 
 dentro del panel "Eliminar", agregar:
 
-1. **JLabel** con texto: `ID a eliminar:`
+1. **JLabel** con texto: `ID a eliminar:` - variable: `lblIdEliminar`
 2. **JTextField** al lado - variable: `txtIdEliminar`
 
 ### 9.2 Agregar boton
@@ -334,13 +340,24 @@ asegurate de que todos los componentes tengan los nombres correctos:
 
 | Componente | Variable | Ubicacion |
 |------------|----------|-----------|
+| Panel | pnlIzquierdo | JFrame (izquierda) |
+| Panel | pnlDerecho | JFrame (derecha) |
+| Panel | pnlInsertar | Panel Izquierdo |
+| Panel | pnlActualizar | Panel Izquierdo |
+| Panel | pnlEliminar | Panel Izquierdo |
+| Panel | pnlRegistros | Panel Derecho |
+| Label | lblNombre | Panel Insertar |
 | TextField | txtNombre | Panel Insertar |
+| Label | lblPrecio | Panel Insertar |
 | TextField | txtPrecio | Panel Insertar |
+| Label | lblTamanio | Panel Insertar |
 | TextField | txtTamanio | Panel Insertar |
 | Button | btnInsertar | Panel Insertar |
+| Label | lblIdActualizar | Panel Actualizar |
 | TextField | txtIdActualizar | Panel Actualizar |
 | Button | btnCargarDatos | Panel Actualizar |
 | Button | btnActualizar | Panel Actualizar |
+| Label | lblIdEliminar | Panel Eliminar |
 | TextField | txtIdEliminar | Panel Eliminar |
 | Button | btnEliminar | Panel Eliminar |
 | Button | btnRefrescar | Panel Registros |
@@ -393,7 +410,7 @@ en esta guia aprendimos a:
 - agregar componentes: JLabel, JTextField, JButton, JTable
 - nombrar correctamente las variables
 
-los eventos de los botones los conectaremos con el controlador en la guia 03
+los eventos de los botones los conectaremos con el controlador en la guia 05
 
 ---
 
